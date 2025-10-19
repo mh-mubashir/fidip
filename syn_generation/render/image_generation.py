@@ -27,7 +27,7 @@ class Mahalanobis(object):
         else:
             return (pose[:, self.prefix:]-self.mean).dot(self.prec)
 
-syn_folder = '/home/faye/Documents/smil/outputs'
+syn_folder = 'syn_generation/output'
 
 ## Assign attributes to renderer
 w, h = (640, 480)
@@ -38,7 +38,7 @@ tmpl = load_mesh('template.obj')
 
 
 ## List background images
-bg_folder = '/home/faye/Documents/smil/bg_img'
+bg_folder = 'syn_generation/render/backgrounds'
 bg_list = []                                                                                                            
 bg_subdirs = [x[0] for x in os.walk(bg_folder)]                                                                            
 for subdir in bg_subdirs:                                                                                            
@@ -50,7 +50,7 @@ for subdir in bg_subdirs:
 
 
 ## List texture images
-txt_folder = '/home/faye/Documents/smil/textures'
+txt_folder = 'syn_generation/render/textures'
 txt_list = []                                                                                                            
 txt_subdirs = [x[0] for x in os.walk(txt_folder)]                                                                            
 for subdir in txt_subdirs:                                                                                            
@@ -61,7 +61,7 @@ for subdir in txt_subdirs:
 #print(txt_list)
 
 num = 0
-bodies_folder = '/home/faye/Documents/smil/bodies'
+bodies_folder = 'syn_generation/output/results'
 for x in os.walk(bodies_folder):  
     if x[0] == bodies_folder:
         continue 

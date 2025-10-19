@@ -118,7 +118,8 @@ class MaxMixturePrior(nn.Module):
         self.num_gaussians = num_gaussians
         self.epsilon = epsilon
         self.use_merged = use_merged
-        gmm_fn = 'gmm_{:02d}.pkl'.format(num_gaussians)
+        # gmm_fn = 'gmm_{:02d}.pkl'.format(num_gaussians)
+        gmm_fn = 'gmm_01.pkl'
 
         full_gmm_fn = os.path.join(prior_folder, gmm_fn)
         if not os.path.exists(full_gmm_fn):
