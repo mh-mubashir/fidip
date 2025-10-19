@@ -27,7 +27,7 @@ MODEL:
   INIT_WEIGHTS: true
   NAME: adaptive_pose_hrnet
   NUM_JOINTS: 17
-  PRETRAINED: ''#models/pytorch/imagenet/hrnet_w48-8ef0771d.pth'
+  PRETRAINED: '/home/mubashir.m/fidip/models/coco/w48_384×288.pth'#models/pytorch/imagenet/hrnet_w48-8ef0771d.pth'
   TARGET_TYPE: gaussian
   IMAGE_SIZE:
   - 288
@@ -92,20 +92,20 @@ MODEL:
 LOSS:
   USE_TARGET_WEIGHT: true
 TRAIN:
-  PRE_BATCH_SIZE_PER_GPU: 16
-  BATCH_SIZE_PER_GPU: 20
+  PRE_BATCH_SIZE_PER_GPU: 32
+  BATCH_SIZE_PER_GPU: 32
   CHECKPOINT: ''
   SHUFFLE: true
   PRE_EPOCH: 1
   BEGIN_EPOCH: 0
-  END_EPOCH: 210
+  END_EPOCH: 20
   LAMBDA: 0.0005
   OPTIMIZER: adam
-  LR: 0.001
+  LR: 0.0005
   LR_FACTOR: 0.1
   LR_STEP:
-  - 40
-  - 200
+  - 50
+  - 80
   WD: 0.0001
   GAMMA1: 0.99
   GAMMA2: 0.0

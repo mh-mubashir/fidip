@@ -71,3 +71,4 @@ python -c "import pyrender, trimesh, smplx; print('FiDIP packages working')"
 - Use the exported YAML file for exact environment recreation
 - The environment was tested and working with all FiDIP dependencies
 - GPU access requires `srun` session with appropriate resources
+

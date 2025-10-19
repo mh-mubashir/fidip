@@ -24,3 +24,4 @@ python -c "import torch; print(f'PyTorch version: {torch.__version__}'); print(f
 
 echo "✅ Environment recreation complete!"
 echo "📝 To activate in future sessions: conda activate fidip_cuda12.2"
+
