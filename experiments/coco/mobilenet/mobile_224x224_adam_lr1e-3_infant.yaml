@@ -22,10 +22,10 @@ DATASET:
   SCALE_FACTOR: 0.3
 MODEL:
   NAME: adaptive_pose_mobile
-  PRETRAINED: ''
+  PRETRAINED: '/home/mubashir.m/fidip/models/coco/w48_384×288.pth'#models/pytorch/imagenet/hrnet_w48-8ef0771d.pth'
   IMAGE_SIZE:
-  - 224
-  - 224
+  - 288
+  - 384
   HEATMAP_SIZE:
   - 56
   - 56
@@ -54,7 +54,7 @@ TRAIN:
   SHUFFLE: true
   PRE_EPOCH: 1
   BEGIN_EPOCH: 0
-  END_EPOCH: 100
+  END_EPOCH: 20
   LAMBDA: 0.0005
   OPTIMIZER: 'adam'
   LR: 0.001
