@@ -1,0 +1,26 @@
+name: fidip_cuda12.2
+channels:
+- pytorch
+- nvidia
+- conda-forge
+- defaults
+dependencies:
+- python=3.12
+- pytorch
+- torchvision
+- torchaudio
+- pytorch-cuda=11.8 # This is compatible with CUDA 12.2 driver
+- numpy
+- matplotlib
+- pandas
+- scipy
+- pip
+- pip:
+- opencv-python
+- dsntnn==0.5.3
+- easydict==1.13
+- pycocotools
+- tensorboardx
+- yacs
+- scikit-image
+- shapely
